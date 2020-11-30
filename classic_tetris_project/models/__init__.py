@@ -4,3 +4,5 @@ from .matches import Match, Game
 from .twitch import TwitchChannel
 from .coin import Side
 from .commands import CustomCommand
+from .events import Event, Qualifier
+from .tournaments import Tournament, TournamentPlayer

@@ -53,11 +53,14 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.humanize',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_nose',
     'django_extensions',
+    'django_object_actions',
+    'markdownx',
     'webpack_loader',
 ]
 
@@ -82,6 +85,9 @@ TEMPLATES = [
         'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
+            'builtins': [
+                'classic_tetris_project.private.templatetags',
+            ],
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
